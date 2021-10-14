@@ -71,8 +71,11 @@ public class DBhelper extends SQLiteOpenHelper {
         SQLiteDatabase DB = this.getWritableDatabase();
         Cursor cursor = DB.rawQuery("Select * from adminLogin", null);
         while (cursor.moveToNext()) {
-            if (cursor.getString(0).equals("admin") && (cursor.getString(1).equals("password"))) {
-                return true;
+            if (cursor.getString(0).equals("admin") ) {
+                if(cursor.getString(1).equals("admin")) {
+                    System.out.println(("success"));
+                    return true;
+                }
             }
         }
         return  false;
