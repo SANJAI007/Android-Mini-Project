@@ -26,6 +26,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.055" />
 
+    <Button
+        android:id="@+id/worker"
+        android:layout_width="150dp"
+        android:layout_height="54dp"
+        android:text="Worker"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.639" />
+
     <TextView
         android:id="@+id/module1"
         android:layout_width="129dp"
@@ -33,31 +46,14 @@
         android:text="Login"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="40dp"
         android:textColorHint="@color/teal_700"
+        android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.151" />
-
-    <Button
-        android:id="@+id/admin"
-        android:layout_width="150dp"
-        android:layout_height="54dp"
-        android:text="ADMIN"
-        android:textSize="24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.442"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.298"
-        android:shadowRadius="250"
-        android:shadowColor="@color/teal_200"
-        android:shadowDx="0"
-        android:shadowDy="0"/>
+        app:layout_constraintVertical_bias="0.169" />
 
     <Button
         android:id="@+id/user"
@@ -67,22 +63,26 @@
         android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.457" />
+        app:layout_constraintVertical_bias="0.475" />
 
     <Button
-        android:id="@+id/worker"
+        android:id="@+id/admin"
         android:layout_width="150dp"
         android:layout_height="54dp"
-        android:text="Worker"
+        android:shadowColor="@color/teal_200"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="250"
+        android:text="ADMIN"
         android:textSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.622" />
+        app:layout_constraintVertical_bias="0.316" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
