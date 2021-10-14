@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 //import androidx.annotation.Nullable;
 
 public class DBhelper extends SQLiteOpenHelper {
@@ -26,8 +27,8 @@ public class DBhelper extends SQLiteOpenHelper {
     public void insertAdmin(String userid,String password){
         SQLiteDatabase DB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("userid","admin");
-        contentValues.put("password","admin");
+        contentValues.put("userid",userid);
+        contentValues.put("password",password);
         long result = DB.insert("adminLogin",null,contentValues);
         /*if(result == -1)
             return false;
@@ -71,9 +72,8 @@ public class DBhelper extends SQLiteOpenHelper {
         SQLiteDatabase DB = this.getWritableDatabase();
         Cursor cursor = DB.rawQuery("Select * from adminLogin", null);
         while (cursor.moveToNext()) {
-            if (cursor.getString(0).equals("admin") ) {
-                if(cursor.getString(1).equals("admin")) {
-                    System.out.println(("success"));
+            if (cursor.getString(0).equals(userid ) ){
+                if(cursor.getString(1).equals(password)) {
                     return true;
                 }
             }

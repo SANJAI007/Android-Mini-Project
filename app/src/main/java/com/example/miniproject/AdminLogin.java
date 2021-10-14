@@ -18,7 +18,7 @@ public class AdminLogin extends AppCompatActivity {
         setContentView(R.layout.activity_admin_login);
         login = (Button) findViewById(R.id.login);
         db=new DBhelper(this);
-        db.insertAdmin("a","a");
+        db.insertAdmin("admin","admin");
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -26,6 +26,7 @@ public class AdminLogin extends AppCompatActivity {
                 String pass =((EditText)findViewById(R.id.password)).getText().toString();
                 Boolean boolValidate=db.validateAdmin(uid,pass);
                 if(boolValidate==true) {
+                    Toast.makeText(getApplicationContext(),"Login Successfull !",Toast.LENGTH_LONG).show();
                     Intent i = new Intent(getApplicationContext(), AdminHome.class);
                     startActivity(i);
                 }
