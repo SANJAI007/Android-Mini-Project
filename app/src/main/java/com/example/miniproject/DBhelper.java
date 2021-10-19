@@ -35,6 +35,17 @@ public class DBhelper extends SQLiteOpenHelper {
         else
             return true;*/
     }
+    public void insertWorker(String userid,String password){
+        SQLiteDatabase DB = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("userid",userid);
+        contentValues.put("password",password);
+        long result = DB.insert("workerLogin",null,contentValues);
+        /*if(result == -1)
+            return false;
+        else
+            return true;*/
+    }
     public Boolean updateAdmin(String userid,String password){
         SQLiteDatabase DB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -71,6 +82,18 @@ public class DBhelper extends SQLiteOpenHelper {
     public Boolean validateAdmin(String userid,String password) {
         SQLiteDatabase DB = this.getWritableDatabase();
         Cursor cursor = DB.rawQuery("Select * from adminLogin", null);
+        while (cursor.moveToNext()) {
+            if (cursor.getString(0).equals(userid ) ){
+                if(cursor.getString(1).equals(password)) {
+                    return true;
+                }
+            }
+        }
+        return  false;
+    }
+    public Boolean validateWorker(String userid,String password) {
+        SQLiteDatabase DB = this.getWritableDatabase();
+        Cursor cursor = DB.rawQuery("Select * from workerLogin", null);
         while (cursor.moveToNext()) {
             if (cursor.getString(0).equals(userid ) ){
                 if(cursor.getString(1).equals(password)) {

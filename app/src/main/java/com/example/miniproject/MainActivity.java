@@ -25,5 +25,24 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),UserHome.class);
+                startActivity(i);
+
+            }
+        });
+        worker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),WorkerLogin.class);
+                startActivity(i);
+
+            }
+        });
+
+
+
     }
 }

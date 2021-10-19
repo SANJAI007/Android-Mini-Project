@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Miniproject">
         <activity
+            android:name=".ViewComplaint"
+            android:exported="true" />
+        <activity
+            android:name=".WorkerHome"
+            android:exported="true" />
+        <activity
+            android:name=".UserHome"
+            android:exported="true" />
+        <activity
+            android:name=".WorkerLogin"
+            android:exported="true" />
+        <activity
             android:name=".AdminLogin"
             android:exported="true" />
         <activity
