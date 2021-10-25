@@ -18,7 +18,7 @@ public class AdminLogin extends AppCompatActivity {
         setContentView(R.layout.activity_admin_login);
         login = (Button) findViewById(R.id.login);
         db=new DBhelper(this);
-       // db.insertAdmin("admin","admin");
+        //db.insertAdmin("saravana","saravana");
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

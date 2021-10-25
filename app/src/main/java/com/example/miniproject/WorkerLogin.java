@@ -18,7 +18,7 @@ public class WorkerLogin extends AppCompatActivity {
         setContentView(R.layout.activity_worker_login);
         login = (Button) findViewById(R.id.login);
         db=new DBhelper(this);
-         db.insertWorker("worker1","worker1");
+         db.insertWorker("worker","worker");
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
