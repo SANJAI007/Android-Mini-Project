@@ -24,7 +24,7 @@
         app:layout_constraintVertical_bias="0.054" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/view"
         android:layout_width="208dp"
         android:layout_height="76dp"
         android:text="View Complaints"
@@ -32,35 +32,9 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.369"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.282" />
+        app:layout_constraintVertical_bias="0.247" />
 
-    <Button
-        android:id="@+id/assign"
-        android:layout_width="182dp"
-        android:layout_height="71dp"
-        android:text="Assign Authority"
-        android:textAlignment="center"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.484" />
-
-    <Button
-        android:id="@+id/update"
-        android:layout_width="202dp"
-        android:layout_height="105dp"
-        android:text="Update Complaint Status"
-        android:textAlignment="center"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.726" />
 </androidx.constraintlayout.widget.ConstraintLayout>

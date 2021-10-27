@@ -245,10 +245,16 @@ public class RegisterComplaints extends AppCompatActivity {
                 e.printStackTrace();  //Latitude: 9.524. Longitude: 77.855 --> Mepco
                 //Toat.makeText
             }
-            Intent sendIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:"+"9597554507"));
-            sendIntent.putExtra("sms_body", "Clean ASAP at Location : "+address+"\n"+city+"\nStatus : Pending");
+            Intent sendIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:"+"6379223074"));
+            sendIntent.putExtra("sms_body", "Clean ASAP at Location : "+address+"\n"+city+"\nStatus : Completed");
             //sendIntent.setType("vnd.android-dir/mms-sms");
             startActivity(sendIntent);
+
+            String sms = "Clean ASAP at Location : "+address+"\n"+city+"\nStatus : Pending";
+            System.out.println(sms);
+            /*Intent compl = new Intent(getApplicationContext(),ViewComplaint.class);
+            compl.putExtra("complaint",sms);
+            startActivity(compl);*/
 
         }
         else {
